@@ -73,13 +73,3 @@ class RSA:
         if not rsa.check():
             raise ValueError('RSA inconsistent')
         return rsa
-
-
-e, n = 937513, 638471
-msg = 12345
-rsa = RSA.break_RSA(e, n)
-
-enc = rsa.encrypt(msg)
-dec = rsa.decrypt(enc)
-
-print(dec == msg)

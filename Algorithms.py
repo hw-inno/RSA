@@ -66,3 +66,13 @@ class Alg:
         if euc['gcd'] != 1:
             raise ValueError('gcd != 1')
         return euc['bezout'][0]
+
+    @classmethod
+    def is_prime_idiot(cls, a):
+        cnt = 0
+        i = 2
+        while i < a:
+            if a % i == 0:
+                cnt += 1
+            i += 1
+        return cnt == 0
